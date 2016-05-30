@@ -91,7 +91,8 @@
 
 然后就可以部署一个hexo了,先丢官网：足以完成环境的部署及所需要做的准备-Hexo官网
 
-修改配置(_config.yml)">
+修改配置(_config.yml)
+12">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Start with Hexo & GitHub">
 <meta property="og:url" content="http://baby24007.github.io/2016/05/30/Start-with-Hexo-GitHub/index.html">
@@ -103,8 +104,9 @@
 
 然后就可以部署一个hexo了,先丢官网：足以完成环境的部署及所需要做的准备-Hexo官网
 
-修改配置(_config.yml)">
-<meta property="og:updated_time" content="2016-05-30T09:12:05.000Z">
+修改配置(_config.yml)
+12">
+<meta property="og:updated_time" content="2016-05-30T09:40:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Start with Hexo & GitHub">
 <meta name="twitter:description" content="如何在github上搞一个个人主页
@@ -114,7 +116,8 @@
 
 然后就可以部署一个hexo了,先丢官网：足以完成环境的部署及所需要做的准备-Hexo官网
 
-修改配置(_config.yml)">
+修改配置(_config.yml)
+12">
 
 
 
@@ -140,6 +143,16 @@
   
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?411e727f9244f2903c5e6d80325aa24d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -191,6 +204,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            Über
           </a>
         </li>
       
@@ -300,18 +323,17 @@
 <li><p>然后就可以部署一个hexo了,先丢官网：足以完成环境的部署及所需要做的准备-<a href="https://hexo.io/" target="_blank" rel="external">Hexo官网</a></p>
 </li>
 <li><p>修改配置(_config.yml)</p>
-</li>
-</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/baby24007/baby24007.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<ul>
+</li>
 <li><p>接着在 Git Bash 中依次输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save    <span class="comment"># 安装使用 git 方式进行部署所需要的插件</span></span><br><span class="line">hexo d                <span class="comment"># 部署到 Github 上，按照提示输入自己 Github 的用户名和密码。</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>部署会强制覆盖掉你之前生成的页面，在博客的目录下会产生 .deploy_git文件夹，不要删除，否则你的部署记录就会不见。之后就可以通过 <a href="http://baby24007.github.io">http://baby24007.github.io</a> 访问你的网站啦。在之后的部署时，建议输入以下代码:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  <span class="comment"># 清除之前 public 文件夹的内容</span></span><br><span class="line">hexo g      <span class="comment"># 生成静态的 public 文件夹，部署时候也是直接拷贝此文件夹里的文件。</span></span><br><span class="line">hexo d      <span class="comment"># 部署到 Github 上，按照提示输入自己 Github 的用户名和密码。</span></span><br><span class="line"><span class="comment"># hexo g 和 hexo d 这两条命令可以合并成 hexo d --g 或者 hexo g --d</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>想将theme的language设置为中文,始终没有成功<br>  应该在哪里配置呢?主题配置文件 or 系统配置文件?<br>  反正都不行</p>
+<li><p>想将theme的language设置为中文,始终没有成功<br>  应该在哪里配置呢?主题配置文件 or 站点配置文件?明明写的是站点配置文件,但设置完了会报错,神马情况<br>  反正都不行</p>
 </li>
+<li>换了一个主题:<a href="http://theme-next.iissnan.com/getting-started.html#download-next-theme" target="_blank" rel="external">next</a>,也是不知道如何设置语言</li>
 </ul>
 <blockquote>
 <p><a href="http://www.cylong.com/blog/2016/04/19/hexo-git/" target="_blank" rel="external">参考文章:Hexo + Git 搭建免费的个人博客</a></p>
@@ -406,7 +428,7 @@
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/images/avatar.jpg"
                alt="Bonita Lee" />
           <p class="site-author-name" itemprop="name">Bonita Lee</p>
           <p class="site-description motion-element" itemprop="description"></p>
