@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -29,7 +29,9 @@
 
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
 
 
 
@@ -99,13 +101,13 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
-      author: 'Author'
+      userId: 6290443314332173000,
+      author: '礼木颜大人'
     }
   };
 </script>
@@ -113,7 +115,7 @@
   <title> urnotBonitaLee </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -170,7 +172,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -180,7 +192,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -190,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -233,8 +245,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/05/31/create-some-tags-or-categories/" itemprop="url">
-                  create some tags or categories
+                <a class="post-title-link" href="/2016/05/31/Resolved-issues/" itemprop="url">
+                  Resolved issues
                 </a>
               
             
@@ -246,8 +258,8 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-31T11:04:58+08:00" content="2016-05-31">
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-31T14:49:08+08:00" content="2016-05-31">
               2016-05-31
             </time>
           </span>
@@ -255,6 +267,13 @@
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/31/Resolved-issues/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/Resolved-issues/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -277,20 +296,253 @@
       
         
           
-            <h2 id="如何正确的添加tags和categories"><a href="#如何正确的添加tags和categories" class="headerlink" title="如何正确的添加tags和categories"></a>如何正确的添加tags和categories</h2><p>在.md文件上面的那一部分内容是Front-matter,用于指定个别文件的变量.<br><strong>需要注意</strong></p>
-<ol>
-<li>必须在最前面:must be the first thing in the file</li>
-<li>必须要三条杠!三条杠=.=  醉了:must take the form of valid YAML set between triple-dashed lines</li>
-<li>UTF-8编码的时候不能有BOM:make sure that no BOM header characters exist in your files<br>书归正传:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">- Diary</span><br><span class="line">tags:</span><br><span class="line">- PS3</span><br><span class="line">- Games</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>在Hexo中其实还可以用json格式:</p>
-<blockquote>
-<p>JSON Front-matter,除了 YAML 外，你也可以使用 JSON 来编写 Front-matter，只要将 — 代换成 ;;; 即可。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"title"</span>: <span class="string">"Hello World"</span>,</span><br><span class="line"><span class="string">"date"</span>: <span class="string">"2013/7/13 20:46:25"</span></span><br><span class="line">;;;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://jekyllrb.com/docs/frontmatter/" target="_blank" rel="external">Front-matter的文档</a><br><a href="https://en.wikipedia.org/wiki/YAML#Lists" target="_blank" rel="external">YAML-Lists</a><br><a href="https://hexo.io/zh-cn/docs/front-matter.html#分类和标签" target="_blank" rel="external">在Hexo中使用front-matter</a><br><a href="http://theme-next.iissnan.com/theme-settings.html#duoshuo-ua" target="_blank" rel="external">Hexo文档还没有一个主题配置文档写得详细,真是够了=.=</a></p>
+          Deploy or 启动server时出错错误信息`bogon:tryHexo admin$ hexo server INFO  Start processing ERROR Theme config load failed. ERROR Process failed: _config.yml YA
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/31/Resolved-issues/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/31/this-is-a-photo-page/" itemprop="url">
+                  This is a photo page
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-31T13:51:28+08:00" content="2016-05-31">
+              2016-05-31
+            </time>
+          </span>
 
           
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/31/this-is-a-photo-page/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/this-is-a-photo-page/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="http://qiniupicbed.qiniudn.com/upload/dc6e189037a4e15750e3df684bcc160b.jpg" rel="gallery_ciov3cvqv00071wfy4475q945"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="http://qiniupicbed.qiniudn.com/upload/dc6e189037a4e15750e3df684bcc160b.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+            
+              <a class="post-gallery-img fancybox"
+                 href="http://qiniupicbed.qiniudn.com/upload/7a960021f8d82ee05d5e43c265175584.png" rel="gallery_ciov3cvqv00071wfy4475q945"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="http://qiniupicbed.qiniudn.com/upload/7a960021f8d82ee05d5e43c265175584.png" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        
+          
+          
+          
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/31/this-is-a-photo-page/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/31/create-some-tags-or-categories/" itemprop="url">
+                  create some tags or categories
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-31T11:04:58+08:00" content="2016-05-31">
+              2016-05-31
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/31/create-some-tags-or-categories/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/create-some-tags-or-categories/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          如何正确的添加tags和categories在.md文件上面的那一部分内容是Front-matter,用于指定个别文件的变量.需要注意
+
+必须在最前面:must be the first thing in the file
+必须要三条杠!三条杠=.=  醉了:must take the form o
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/31/create-some-tags-or-categories/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -351,7 +603,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-05-31T10:19:42+08:00" content="2016-05-31">
               2016-05-31
             </time>
@@ -360,6 +612,13 @@
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/31/create-a-404-page/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/create-a-404-page/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -382,21 +641,14 @@
       
         
           
-            <h2 id="如何在hexo中建立一个404页面"><a href="#如何在hexo中建立一个404页面" class="headerlink" title="如何在hexo中建立一个404页面"></a>如何在hexo中建立一个404页面</h2><p>Github是可以直接在根目录建立404页面的,详见<a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/" target="_blank" rel="external">自定义404</a><br>但是自定义404页面仅对绑定顶级域名的项目才起作用，GitHub默认分配的二级域名是不起作用的。<br>这该如何是好?<br>参考&gt; <a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a><br>可以创建一个公益404,我准备先试一下,然后成功了.<br>当然在本地服务器是不生效的,需要push后在线上才能访问到:<a href="http://baby24007.github.io/error">这里是一个错误地址</a><br>很简单:</p>
-<ol>
-<li>在/source下创建一个html,named:404.html</li>
-<li>html中的内容就是你想展示的404内容</li>
-<li><p>腾讯公益404页面代码:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"http://www.qq.com/404/search_children.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> <span class="attr">homePageUrl</span>=<span class="string">"http://baby24007.github.com"</span> <span class="attr">homePageName</span>=<span class="string">"回到主页"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>然后就用这个吧.懒得写了.</p>
-</li>
-</ol>
-<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><blockquote>
-<p><a href="http://jekyllrb.com/docs/frontmatter/" target="_blank" rel="external">md的header?-Front Matter</a><br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a><br><a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/" target="_blank" rel="external">自定义404</a></p>
-</blockquote>
+          如何在hexo中建立一个404页面Github是可以直接在根目录建立404页面的,详见自定义404但是自定义404页面仅对绑定顶级域名的项目才起作用，GitHub默认分配的二级域名是不起作用的。这该如何是好?参考&gt; hexo你的博客可以创建一个公益404,我准备先试一下,然后成功了.当然在本地
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/31/create-a-404-page/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -457,7 +709,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-05-30T15:07:15+08:00" content="2016-05-30">
               2016-05-30
             </time>
@@ -466,6 +718,13 @@
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/30/Start-with-Hexo-GitHub/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/30/Start-with-Hexo-GitHub/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -488,45 +747,19 @@
       
         
           
-            <h2 id="如何在github上搞一个个人主页"><a href="#如何在github上搞一个个人主页" class="headerlink" title="如何在github上搞一个个人主页"></a>如何在github上搞一个个人主页</h2><ul>
-<li><p>要有一个命名规则为<code>username.github.io</code> 的仓库，里面放的是这个网站的code<br><em>乱起名字不乖，不生效的，还要删掉＝。＝</em></p>
-</li>
-<li><p>上一步疑惑了我很久，是因为我没看文档，so，继续丢文档-<a href="https://help.github.com/articles/creating-pages-with-the-automatic-generator/" target="_blank" rel="external">github创建gh-pages的文档</a></p>
-</li>
-<li><p>然后就可以部署一个hexo了,先丢官网：足以完成环境的部署及所需要做的准备-<a href="https://hexo.io/" target="_blank" rel="external">Hexo官网</a></p>
-</li>
-<li><p>修改配置(_config.yml)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/baby24007/baby24007.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>接着在 Git Bash 中依次输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save    <span class="comment"># 安装使用 git 方式进行部署所需要的插件</span></span><br><span class="line">hexo d                <span class="comment"># 部署到 Github 上，按照提示输入自己 Github 的用户名和密码。</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>部署会强制覆盖掉你之前生成的页面，在博客的目录下会产生 .deploy_git文件夹，不要删除，否则你的部署记录就会不见。之后就可以通过 <a href="http://baby24007.github.io">http://baby24007.github.io</a> 访问你的网站啦。在之后的部署时，建议输入以下代码:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  <span class="comment"># 清除之前 public 文件夹的内容</span></span><br><span class="line">hexo g      <span class="comment"># 生成静态的 public 文件夹，部署时候也是直接拷贝此文件夹里的文件。</span></span><br><span class="line">hexo d      <span class="comment"># 部署到 Github 上，按照提示输入自己 Github 的用户名和密码。</span></span><br><span class="line"><span class="comment"># hexo g 和 hexo d 这两条命令可以合并成 hexo d --g 或者 hexo g --d</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>想将theme的language设置为中文,始终没有成功<br>  应该在哪里配置呢?主题配置文件 or 站点配置文件?明明写的是站点配置文件,但设置完了会报错,神马情况<br>  反正都不行</p>
-</li>
-<li><p>换了一个主题:<a href="http://theme-next.iissnan.com/getting-started.html#download-next-theme" target="_blank" rel="external">next</a>,也是不知道如何设置语言</p>
-</li>
-<li><p>创建一个新的页面</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">'about'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>想要增加评论功能,尝试使用<a href="http://dev.duoshuo.com/docs" target="_blank" rel="external">多说</a></p>
-</li>
-</ul>
-<ol>
-<li><p>next主题中配置多说</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">duoshuo_info:</span><br><span class="line">  ua_<span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  admin_<span class="built_in">enable</span>: <span class="literal">false</span></span><br><span class="line">  user_id:</span><br><span class="line">  admin_nickname:</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>登录并访问「我的主页」获取 user_id ， 此 ID 是 网址最后那串数字</p>
-</li>
-<li>然后自己去翻多说的文档?</li>
-</ol>
-<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h3><blockquote>
-<p><a href="http://www.cylong.com/blog/2016/04/19/hexo-git/" target="_blank" rel="external">Hexo + Git 搭建免费的个人博客</a><br><a href="https://zespia.tw/blog/2012/10/11/hexo-debut/" target="_blank" rel="external">hexo的出生地呦!</a><br><a href="https://github.com/tommy351" target="_blank" rel="external">hexo爸爸的github</a></p>
-</blockquote>
+          如何在github上搞一个个人主页
+要有一个命名规则为username.github.io 的仓库，里面放的是这个网站的code乱起名字不乖，不生效的，还要删掉＝。＝
 
-          
+上一步疑惑了我很久，是因为我没看文档，so，继续丢文档-github创建gh-pages的文档
+
+然后就可以部署一个hexo了,先
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/30/Start-with-Hexo-GitHub/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -587,7 +820,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-05-30T12:46:05+08:00" content="2016-05-30">
               2016-05-30
             </time>
@@ -596,6 +829,13 @@
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/30/Hello-Hexo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/30/Hello-Hexo/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -618,12 +858,15 @@
       
         
           
-            <h2 id="这里贴一段简短的js代码测试一下marked"><a href="#这里贴一段简短的js代码测试一下marked" class="headerlink" title="这里贴一段简短的js代码测试一下marked"></a>这里贴一段简短的js代码测试一下marked</h2><h3 id="Create-a-code"><a href="#Create-a-code" class="headerlink" title="Create a code"></a>Create a code</h3><blockquote>
-<p>Before that , There is a blockquote.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addConfig</span>(<span class="params">obj, conf</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">Object</span>.keys(conf).forEach(<span class="function"><span class="keyword">function</span> (<span class="params">key</span>) </span>&#123;</span><br><span class="line">    obj[key] = conf[key];</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<hr>
-<h3 id="Depart-with-a-line"><a href="#Depart-with-a-line" class="headerlink" title="Depart with a line"></a>Depart with a line</h3>
-          
+          这里贴一段简短的js代码测试一下markedCreate a code
+Before that , There is a blockquote.12345function addConfig(obj, conf) &#123;  Object.keys(conf).forEach(function 
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/30/Hello-Hexo/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -684,7 +927,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-05-30T12:24:17+08:00" content="2016-05-30">
               2016-05-30
             </time>
@@ -693,6 +936,13 @@
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/30/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/30/hello-world/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -715,17 +965,14 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/30/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -785,7 +1032,7 @@
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/images/avatar.jpg"
                alt="Bonita Lee" />
           <p class="site-author-name" itemprop="name">Bonita Lee</p>
           <p class="site-description motion-element" itemprop="description"></p>
@@ -793,8 +1040,8 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
@@ -803,8 +1050,8 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
               </a>
             </div>
           
@@ -814,6 +1061,35 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/baby24007" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/baby24007" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/bazajj" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
           
         </div>
 
@@ -848,13 +1124,13 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 
@@ -890,7 +1166,7 @@
 
 
   
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
 
   
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
@@ -905,7 +1181,7 @@
   <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 
 
   
@@ -931,9 +1207,28 @@
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"baby24007"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
   
+    
+  
+
+
 
 
 

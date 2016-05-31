@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="issues," />
 
 
 
@@ -86,15 +86,16 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="urnotBonitaLee">
-<meta property="og:url" content="http://baby24007.github.io/tags/YAML/index.html">
+<meta name="description" content="Deploy or 启动server时出错错误信息`bogon:tryHexo admin$ hexo server INFO  Start processing ERROR Theme config load failed. ERROR Process failed: _config.yml YAMLException: can not read a block mapping entry; a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Resolved issues">
+<meta property="og:url" content="http://baby24007.github.io/2016/05/31/Resolved-issues/index.html">
 <meta property="og:site_name" content="urnotBonitaLee">
-<meta property="og:description">
+<meta property="og:description" content="Deploy or 启动server时出错错误信息`bogon:tryHexo admin$ hexo server INFO  Start processing ERROR Theme config load failed. ERROR Process failed: _config.yml YAMLException: can not read a block mapping entry; a">
+<meta property="og:updated_time" content="2016-05-31T06:56:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="urnotBonitaLee">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Resolved issues">
+<meta name="twitter:description" content="Deploy or 启动server时出错错误信息`bogon:tryHexo admin$ hexo server INFO  Start processing ERROR Theme config load failed. ERROR Process failed: _config.yml YAMLException: can not read a block mapping entry; a">
 
 
 
@@ -112,7 +113,7 @@
   };
 </script>
 
-  <title> 标签: YAML | urnotBonitaLee </title>
+  <title> Resolved issues | urnotBonitaLee </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -133,7 +134,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -221,46 +222,137 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        YAML
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Resolved issues
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-31T14:49:08+08:00" content="2016-05-31">
+              2016-05-31
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/31/Resolved-issues/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/Resolved-issues/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h2 id="Deploy-or-启动server时出错"><a href="#Deploy-or-启动server时出错" class="headerlink" title="Deploy or 启动server时出错"></a>Deploy or 启动server时出错</h2><h3 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h3><p>`bogon:tryHexo admin$ hexo server<br> INFO  Start processing<br> ERROR Theme config load failed.<br> ERROR Process failed: _config.yml<br> YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 245, column 1:</p>
+<pre><code># Disqus
+^
+at generateError (/Users/admin/PhpstormProjects/test/BonitaOnTheWay/tryHexo/node_modules/hexo/node_modules/js-yaml/lib/js-yaml/loader.js:162:10)
+at throwError (/Users/admin/PhpstormProjects/test/BonitaOnTheWay/tryHexo/node_modules/hexo/node_modules/js-yaml/lib/js-yaml/loader.js:168:9)
+at readBlockMapping (/Users/admin/PhpstormProjects/test/BonitaOnTheWay/tryHexo/node_modules/hexo/node_modules/js-yaml/lib/js-yaml/loader.js:1040:9)
+at composeNode (/Users/admin/PhpstormProjects/test/BonitaOnTheWay`
+</code></pre><h3 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h3><blockquote>
+<p>_config.yml的每个属性配置时，:后边一定要有一个空格<br>找到报错的行，改掉<br>之前language设置不了就是因为报错了，完全没有编译成功，我竟然没发现，真是够了</p>
+</blockquote>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/05/31/create-some-tags-or-categories/" itemprop="url">
-              
-                <span itemprop="name">create some tags or categories</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-31T11:04:58+08:00"
-              content="2016-05-31" >
-          05-31
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/issues/" rel="tag">#issues</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/31/this-is-a-photo-page/" rel="next" title="This is a photo page">
+                <i class="fa fa-chevron-left"></i> This is a photo page
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -268,6 +360,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/31/Resolved-issues/"
+           data-title="Resolved issues" data-url="http://baby24007.github.io/2016/05/31/Resolved-issues/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -287,8 +387,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -360,6 +469,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Deploy-or-启动server时出错"><span class="nav-number">1.</span> <span class="nav-text">Deploy or 启动server时出错</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#错误信息"><span class="nav-number">1.1.</span> <span class="nav-text">错误信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决问题"><span class="nav-number">1.2.</span> <span class="nav-text">解决问题</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -456,6 +576,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
