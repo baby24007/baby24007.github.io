@@ -104,8 +104,8 @@
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
-      author: 'Author'
+      userId: 6290443314332173000,
+      author: '礼木颜大人'
     }
   };
 </script>
@@ -180,7 +180,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Beranda
           </a>
         </li>
       
@@ -190,7 +190,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            About
+            Tentang
           </a>
         </li>
       
@@ -200,7 +200,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Arsip
           </a>
         </li>
       
@@ -266,7 +266,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Diposting di</span>
             <time itemprop="dateCreated" datetime="2016-05-30T15:07:15+08:00" content="2016-05-30">
               2016-05-30
             </time>
@@ -318,11 +318,22 @@
 <li><p>换了一个主题:<a href="http://theme-next.iissnan.com/getting-started.html#download-next-theme" target="_blank" rel="external">next</a>,也是不知道如何设置语言</p>
 </li>
 <li><p>创建一个新的页面</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">'about'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">'about'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>想要增加评论功能,尝试使用<a href="http://dev.duoshuo.com/docs" target="_blank" rel="external">多说</a></p>
 </li>
 </ul>
-<blockquote>
-<p><a href="http://www.cylong.com/blog/2016/04/19/hexo-git/" target="_blank" rel="external">参考文章:Hexo + Git 搭建免费的个人博客</a></p>
+<ol>
+<li><p>next主题中配置多说</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">duoshuo_info:</span><br><span class="line">  ua_<span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  admin_<span class="built_in">enable</span>: <span class="literal">false</span></span><br><span class="line">  user_id:</span><br><span class="line">  admin_nickname:</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>登录并访问「我的主页」获取 user_id ， 此 ID 是 网址最后那串数字</p>
+</li>
+<li>然后自己去翻多说的文档?</li>
+</ol>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h3><blockquote>
+<p><a href="http://www.cylong.com/blog/2016/04/19/hexo-git/" target="_blank" rel="external">Hexo + Git 搭建免费的个人博客</a></p>
+<p><a href="https://zespia.tw/blog/2012/10/11/hexo-debut/" target="_blank" rel="external">hexo的出生地呦!</a><br><a href="https://github.com/tommy351" target="_blank" rel="external">hexo爸爸的github</a></p>
 </blockquote>
 
           
@@ -386,7 +397,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Diposting di</span>
             <time itemprop="dateCreated" datetime="2016-05-30T12:46:05+08:00" content="2016-05-30">
               2016-05-30
             </time>
@@ -483,7 +494,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Diposting di</span>
             <time itemprop="dateCreated" datetime="2016-05-30T12:24:17+08:00" content="2016-05-30">
               2016-05-30
             </time>
@@ -593,7 +604,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-name">posting</span>
             </a>
           </div>
 
@@ -673,7 +684,7 @@
 </div>
 
 <div class="theme-info">
-  Theme -
+  Tema -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
