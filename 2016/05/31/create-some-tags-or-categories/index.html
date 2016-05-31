@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Front-matter,YAML," />
 
 
 
@@ -84,19 +84,28 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="如何正确的添加tags和categories在.md文件上面的那一部分内容是Front-matter,用于指定个别文件的变量.需要注意
+
+必须在最前面:must be the first thing in the file
+必须要三条杠!三条杠=.=  醉了:must take the form of valid YAML set between triple-dashed lines
+UTF-8">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://baby24007.github.io/2016/05/30/hello-world/index.html">
+<meta property="og:title" content="create some tags or categories">
+<meta property="og:url" content="http://baby24007.github.io/2016/05/31/create-some-tags-or-categories/index.html">
 <meta property="og:site_name" content="urnotBonitaLee">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-05-30T04:24:17.000Z">
+<meta property="og:description" content="如何正确的添加tags和categories在.md文件上面的那一部分内容是Front-matter,用于指定个别文件的变量.需要注意
+
+必须在最前面:must be the first thing in the file
+必须要三条杠!三条杠=.=  醉了:must take the form of valid YAML set between triple-dashed lines
+UTF-8">
+<meta property="og:updated_time" content="2016-05-31T03:17:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="create some tags or categories">
+<meta name="twitter:description" content="如何正确的添加tags和categories在.md文件上面的那一部分内容是Front-matter,用于指定个别文件的变量.需要注意
+
+必须在最前面:must be the first thing in the file
+必须要三条杠!三条杠=.=  醉了:must take the form of valid YAML set between triple-dashed lines
+UTF-8">
 
 
 
@@ -114,7 +123,7 @@ Quick">
   };
 </script>
 
-  <title> Hello World | urnotBonitaLee </title>
+  <title> create some tags or categories | urnotBonitaLee </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -234,7 +243,7 @@ Quick">
             
             
               
-                Hello World
+                create some tags or categories
               
             
           </h1>
@@ -246,8 +255,8 @@ Quick">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-30T12:24:17+08:00" content="2016-05-30">
-              2016-05-30
+            <time itemprop="dateCreated" datetime="2016-05-31T11:04:58+08:00" content="2016-05-31">
+              2016-05-31
             </time>
           </span>
 
@@ -274,15 +283,18 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="如何正确的添加tags和categories"><a href="#如何正确的添加tags和categories" class="headerlink" title="如何正确的添加tags和categories"></a>如何正确的添加tags和categories</h2><p>在.md文件上面的那一部分内容是Front-matter,用于指定个别文件的变量.<br><strong>需要注意</strong></p>
+<ol>
+<li>必须在最前面:must be the first thing in the file</li>
+<li>必须要三条杠!三条杠=.=  醉了:must take the form of valid YAML set between triple-dashed lines</li>
+<li>UTF-8编码的时候不能有BOM:make sure that no BOM header characters exist in your files<br>书归正传:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">- Diary</span><br><span class="line">tags:</span><br><span class="line">- PS3</span><br><span class="line">- Games</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在Hexo中其实还可以用json格式:</p>
+<blockquote>
+<p>JSON Front-matter,除了 YAML 外，你也可以使用 JSON 来编写 Front-matter，只要将 — 代换成 ;;; 即可。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"title"</span>: <span class="string">"Hello World"</span>,</span><br><span class="line"><span class="string">"date"</span>: <span class="string">"2013/7/13 20:46:25"</span></span><br><span class="line">;;;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://jekyllrb.com/docs/frontmatter/" target="_blank" rel="external">Front-matter的文档</a><br><a href="https://en.wikipedia.org/wiki/YAML#Lists" target="_blank" rel="external">YAML-Lists</a><br><a href="https://hexo.io/zh-cn/docs/front-matter.html#分类和标签" target="_blank" rel="external">在Hexo中使用front-matter</a><br><a href="http://theme-next.iissnan.com/theme-settings.html#duoshuo-ua" target="_blank" rel="external">Hexo文档还没有一个主题配置文档写得详细,真是够了=.=</a></p>
 
       
     </div>
@@ -302,18 +314,26 @@ Quick">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Front-matter/" rel="tag">#Front-matter</a>
+          
+            <a href="/tags/YAML/" rel="tag">#YAML</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/05/31/create-a-404-page/" rel="next" title="create a 404 page">
+                <i class="fa fa-chevron-left"></i> create a 404 page
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/30/Hello-Hexo/" rel="prev" title="Javascript Test">
-                Javascript Test <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -420,7 +440,7 @@ Quick">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何正确的添加tags和categories"><span class="nav-number">1.</span> <span class="nav-text">如何正确的添加tags和categories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">2.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
             
           </div>
         </section>
