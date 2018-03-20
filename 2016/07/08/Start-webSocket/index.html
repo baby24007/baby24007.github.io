@@ -1,92 +1,11 @@
-<!doctype html>
-
-
-
-  
-
-
-<html class="theme-next mist use-motion">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="utf-8">
   
-  
-    
-  
-  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
-
-
-
-
-
-
-<meta name="description" content="现在系统采用的是comet长链接，要修改为websocket实现通信1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878">
+  <title>Start webSocket | urnotBonitaLee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="现在系统采用的是comet长链接，要修改为websocket实现通信1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Start webSocket">
 <meta property="og:url" content="http://baby24007.github.io/2016/07/08/Start-webSocket/index.html">
@@ -99,201 +18,122 @@
 <meta name="twitter:title" content="Start webSocket">
 <meta name="twitter:description" content="现在系统采用的是comet长链接，要修改为websocket实现通信1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878">
 <meta name="twitter:image" content="http://thumbnail0.baidupcs.com/thumbnail/acad81fc97afa98e8747c8b6c7295909?fid=3422552496-250528-953740440445751&time=1467972000&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-HHs8YVzenPzlFkr5qJ%2BymQ24bI0%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=4401564112992226463&dp-callid=0&size=c710_u400&quality=100">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+	<!-- If needed, replace your own web font service -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
 
+  <link rel="stylesheet" href="/icomoon/style.css">
+  <link rel="stylesheet" href="/style.css">
 
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: 6290443314332173000,
-      author: '礼木颜大人'
-    }
-  };
-</script>
-
-  <title> Start webSocket | urnotBonitaLee </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
-
-  
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">urnotBonitaLee</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle"></p>
+<body>
+  <div class="site-wrapper">
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
 </div>
+<script>document.getElementById("loading-bar").style.width="20%";</script>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
 
-<nav class="site-nav">
-  
+<header id="header" class="site-header clearfix">
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            About
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
+  <a class="logo square clearfix" href="/">
+    <!-- 
+      Replace with your own size name, for example:
+      <span class="b">A</span>
+      <span class="w">B</span>
+      <span class="b">C</span>
+     -->
     
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
+      <span class="b">
+        u
+      </span>
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Start webSocket
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-08T18:26:43+08:00" content="2016-07-08">
-              2016-07-08
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/08/Start-webSocket/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/08/Start-webSocket/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
+      <span class="w">
+        r
+      </span>
     
+      <span class="b">
+        n
+      </span>
+    
+      <span class="w">
+        o
+      </span>
+    
+      <span class="b">
+        t
+      </span>
+    
+      <span class="w">
+        B
+      </span>
+    
+      <span class="b">
+        o
+      </span>
+    
+      <span class="b">
+        n
+      </span>
+    
+      <span class="b">
+        i
+      </span>
+    
+      <span class="w">
+        t
+      </span>
+    
+      <span class="b">
+        a
+      </span>
+    
+      <span class="b">
+        L
+      </span>
+    
+      <span class="b">
+        e
+      </span>
+    
+      <span class="b">
+        e
+      </span>
+    
+  </a>
+  <a class="me square site-nav-switch clearfix">
+    <span class="b">
+    	<span class="icon icon-menu"></span>
+    </span>
+  </a>
 
+</header>
 
-    <div class="post-body" itemprop="articleBody">
+    <script>document.getElementById("loading-bar").style.width="40%";</script>
+    <main id="main" class="clearfix">
+      <article id="post-Start-webSocket"
+  class="article white-box article-type-post"
+  itemscope itemprop="blogPost">
 
-      
-      
+  <header class="article-header">
+    <h1 class="article-title" itemprop="name">
+      Start webSocket
+    </h1>
+    <div class="article-meta">
+      Posted on 
+      <time class="article-time" datetime="2016-07-08T10:26:43.000Z" itemprop="datePublished">
+        Jul 8, 2016
+      </time>
+    </div>
+  </header>
 
-      
-        <h2 id="现在系统采用的是comet长链接，要修改为websocket实现通信"><a href="#现在系统采用的是comet长链接，要修改为websocket实现通信" class="headerlink" title="现在系统采用的是comet长链接，要修改为websocket实现通信"></a>现在系统采用的是comet长链接，要修改为websocket实现通信</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 代替comet</span></span><br><span class="line"><span class="comment"> * 相关点：feed,newnotice,remind,at,announcement,notice,privatemsg</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">define(<span class="function"><span class="keyword">function</span> (<span class="params">require, exports, module</span>) </span>&#123;</span><br><span class="line"><span class="meta">    'use strict'</span>;</span><br><span class="line">    <span class="keyword">var</span> regId = <span class="number">1</span>,</span><br><span class="line">        handlerPoll = [];</span><br><span class="line"><span class="comment">//注册事件的部分还可以用,要不要改名字啊？</span></span><br><span class="line">    $.registLongPulling = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $body = $(<span class="string">'body:first'</span>);</span><br><span class="line">        <span class="keyword">if</span> (!$body.data(<span class="string">':data(rk-websocket)'</span>)) &#123;</span><br><span class="line">            $body.websocket(&#123;</span><br><span class="line">                message: <span class="function"><span class="keyword">function</span>(<span class="params">evt, msg</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">if</span> (msg != <span class="string">'timeout'</span>) &#123;</span><br><span class="line">                        <span class="keyword">if</span>(msg &amp;&amp; (<span class="keyword">typeof</span> msg !== <span class="string">'Object'</span>))&#123;</span><br><span class="line">                            msg = $.parseJSON(msg);</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; handlerPoll.length; i++) &#123;</span><br><span class="line">                                handlerPoll[i].call(msg, msg);</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (ex) &#123;</span><br><span class="line">                            <span class="built_in">window</span>.console &amp;&amp; <span class="built_in">console</span>.log(<span class="string">'the callback of long pulling error: '</span> + <span class="built_in">String</span>(handlerPoll[i]));</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> ($.isFunction(fn)) &#123;</span><br><span class="line">            fn.rid = regId;</span><br><span class="line">            regId += <span class="number">1</span>;</span><br><span class="line">            handlerPoll.push(fn);</span><br><span class="line">            <span class="keyword">return</span> fn.rid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">    $.unregistLongPulling = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> ($.isFunction(fn) &amp;&amp; fn.rid) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = handlerPoll.length - <span class="number">1</span>; i &gt; <span class="number">-1</span>; i--) &#123;</span><br><span class="line">                <span class="keyword">if</span> (handlerPoll[i].rid == fn.rid) &#123;</span><br><span class="line">                    handlerPoll.splice(i, <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    $.widget(<span class="string">'rk.websocket'</span>, &#123;</span><br><span class="line">        options: &#123;</span><br><span class="line">            clientID: SESSION.cometClientId,</span><br><span class="line">            userID: SESSION.user.id,</span><br><span class="line">            message: $.noop,</span><br><span class="line">            url:<span class="string">'wss://192.168.0.103:8989/ws?'</span><span class="comment">//getHostName</span></span><br><span class="line">        &#125;,</span><br><span class="line">        _create: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> me = <span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">            me._delay(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                me.init();</span><br><span class="line">            &#125;, <span class="number">10</span> * <span class="number">1000</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        init:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> me = <span class="keyword">this</span>,</span><br><span class="line">                opt = me.options;</span><br><span class="line">            <span class="keyword">var</span> url = [opt.url,<span class="string">'clientId='</span>, opt.clientID,  <span class="string">'&amp;alias='</span>, opt.userID].join(<span class="string">''</span>);</span><br><span class="line">            <span class="keyword">var</span> browserWebSocket = <span class="built_in">window</span>.WebSocket || <span class="built_in">window</span>.MozWebSocket;</span><br><span class="line">            <span class="keyword">var</span> webSocket = browserWebSocket;</span><br><span class="line">            <span class="keyword">if</span> (webSocket &amp;&amp; !me.connection) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    me.connection = <span class="keyword">new</span> WebSocket(url);</span><br><span class="line">                    me._bind();</span><br><span class="line">                &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">                    <span class="built_in">console</span>.error(<span class="string">'没有websocket怎么办'</span>)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        _bind:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> me = <span class="keyword">this</span>;</span><br><span class="line">            <span class="keyword">var</span> connection = me.connection;</span><br><span class="line">            <span class="keyword">if</span>(connection)&#123;</span><br><span class="line">                connection.onopen = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                    me.onOpen()</span><br><span class="line">                &#125;;</span><br><span class="line">                connection.onclose = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                    me.onClose()</span><br><span class="line">                &#125;;</span><br><span class="line">                connection.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>) </span>&#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(ev)</span><br><span class="line">                    me._trigger(<span class="string">'message'</span>, <span class="literal">null</span>, ev.data);</span><br><span class="line">                &#125;;</span><br><span class="line">                connection.onerror = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">                    me.onError(<span class="string">"websocket error"</span>, e)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        onOpen:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.info(<span class="string">'websocket open'</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        onError:<span class="function"><span class="keyword">function</span>(<span class="params">msg,e</span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.info(msg);</span><br><span class="line">        &#125;,</span><br><span class="line">        onClose:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.info(<span class="string">'websocket closed'</span>);</span><br><span class="line">            <span class="comment">//this._destroy();</span></span><br><span class="line">        &#125;,</span><br><span class="line">        getHostName:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+  <div class="article-entry" itemprop="articleBody">
+    <h2 id="现在系统采用的是comet长链接，要修改为websocket实现通信"><a href="#现在系统采用的是comet长链接，要修改为websocket实现通信" class="headerlink" title="现在系统采用的是comet长链接，要修改为websocket实现通信"></a>现在系统采用的是comet长链接，要修改为websocket实现通信</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 代替comet</span></span><br><span class="line"><span class="comment"> * 相关点：feed,newnotice,remind,at,announcement,notice,privatemsg</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">define(<span class="function"><span class="keyword">function</span> (<span class="params">require, exports, module</span>) </span>&#123;</span><br><span class="line"><span class="meta">    'use strict'</span>;</span><br><span class="line">    <span class="keyword">var</span> regId = <span class="number">1</span>,</span><br><span class="line">        handlerPoll = [];</span><br><span class="line"><span class="comment">//注册事件的部分还可以用,要不要改名字啊？</span></span><br><span class="line">    $.registLongPulling = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $body = $(<span class="string">'body:first'</span>);</span><br><span class="line">        <span class="keyword">if</span> (!$body.data(<span class="string">':data(rk-websocket)'</span>)) &#123;</span><br><span class="line">            $body.websocket(&#123;</span><br><span class="line">                message: <span class="function"><span class="keyword">function</span>(<span class="params">evt, msg</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">if</span> (msg != <span class="string">'timeout'</span>) &#123;</span><br><span class="line">                        <span class="keyword">if</span>(msg &amp;&amp; (<span class="keyword">typeof</span> msg !== <span class="string">'Object'</span>))&#123;</span><br><span class="line">                            msg = $.parseJSON(msg);</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; handlerPoll.length; i++) &#123;</span><br><span class="line">                                handlerPoll[i].call(msg, msg);</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (ex) &#123;</span><br><span class="line">                            <span class="built_in">window</span>.console &amp;&amp; <span class="built_in">console</span>.log(<span class="string">'the callback of long pulling error: '</span> + <span class="built_in">String</span>(handlerPoll[i]));</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> ($.isFunction(fn)) &#123;</span><br><span class="line">            fn.rid = regId;</span><br><span class="line">            regId += <span class="number">1</span>;</span><br><span class="line">            handlerPoll.push(fn);</span><br><span class="line">            <span class="keyword">return</span> fn.rid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">    $.unregistLongPulling = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> ($.isFunction(fn) &amp;&amp; fn.rid) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = handlerPoll.length - <span class="number">1</span>; i &gt; <span class="number">-1</span>; i--) &#123;</span><br><span class="line">                <span class="keyword">if</span> (handlerPoll[i].rid == fn.rid) &#123;</span><br><span class="line">                    handlerPoll.splice(i, <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    $.widget(<span class="string">'rk.websocket'</span>, &#123;</span><br><span class="line">        options: &#123;</span><br><span class="line">            clientID: SESSION.cometClientId,</span><br><span class="line">            userID: SESSION.user.id,</span><br><span class="line">            message: $.noop,</span><br><span class="line">            url:<span class="string">'wss://192.168.0.103:8989/ws?'</span><span class="comment">//getHostName</span></span><br><span class="line">        &#125;,</span><br><span class="line">        _create: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> me = <span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">            me._delay(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                me.init();</span><br><span class="line">            &#125;, <span class="number">10</span> * <span class="number">1000</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        init:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> me = <span class="keyword">this</span>,</span><br><span class="line">                opt = me.options;</span><br><span class="line">            <span class="keyword">var</span> url = [opt.url,<span class="string">'clientId='</span>, opt.clientID,  <span class="string">'&amp;alias='</span>, opt.userID].join(<span class="string">''</span>);</span><br><span class="line">            <span class="keyword">var</span> browserWebSocket = <span class="built_in">window</span>.WebSocket || <span class="built_in">window</span>.MozWebSocket;</span><br><span class="line">            <span class="keyword">var</span> webSocket = browserWebSocket;</span><br><span class="line">            <span class="keyword">if</span> (webSocket &amp;&amp; !me.connection) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    me.connection = <span class="keyword">new</span> WebSocket(url);</span><br><span class="line">                    me._bind();</span><br><span class="line">                &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">                    <span class="built_in">console</span>.error(<span class="string">'没有websocket怎么办'</span>)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        _bind:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> me = <span class="keyword">this</span>;</span><br><span class="line">            <span class="keyword">var</span> connection = me.connection;</span><br><span class="line">            <span class="keyword">if</span>(connection)&#123;</span><br><span class="line">                connection.onopen = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                    me.onOpen()</span><br><span class="line">                &#125;;</span><br><span class="line">                connection.onclose = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                    me.onClose()</span><br><span class="line">                &#125;;</span><br><span class="line">                connection.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>) </span>&#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(ev)</span><br><span class="line">                    me._trigger(<span class="string">'message'</span>, <span class="literal">null</span>, ev.data);</span><br><span class="line">                &#125;;</span><br><span class="line">                connection.onerror = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">                    me.onError(<span class="string">"websocket error"</span>, e)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        onOpen:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.info(<span class="string">'websocket open'</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        onError:<span class="function"><span class="keyword">function</span>(<span class="params">msg,e</span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.info(msg);</span><br><span class="line">        &#125;,</span><br><span class="line">        onClose:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.info(<span class="string">'websocket closed'</span>);</span><br><span class="line">            <span class="comment">//this._destroy();</span></span><br><span class="line">        &#125;,</span><br><span class="line">        getHostName:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="戳这里－-gt-comet实现的流程图"><a href="#戳这里－-gt-comet实现的流程图" class="headerlink" title="戳这里－&gt;comet实现的流程图"></a><a href="https://www.processon.com/view/link/577e06f7e4b04bc7eebd4973" target="_blank" rel="noopener">戳这里－&gt;comet实现的流程图</a></h2><h2 id="改成websocket以后的流程图"><a href="#改成websocket以后的流程图" class="headerlink" title="改成websocket以后的流程图"></a>改成websocket以后的流程图</h2><p><img src="http://thumbnail0.baidupcs.com/thumbnail/acad81fc97afa98e8747c8b6c7295909?fid=3422552496-250528-953740440445751&amp;time=1467972000&amp;rt=sh&amp;sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-HHs8YVzenPzlFkr5qJ%2BymQ24bI0%3D&amp;expires=8h&amp;chkv=0&amp;chkbd=0&amp;chkpc=&amp;dp-logid=4401564112992226463&amp;dp-callid=0&amp;size=c710_u400&amp;quality=100" alt="改成websocket以后的流程图"></p>
 <blockquote>
 <p>就是这么懒，可怎么整</p>
@@ -302,330 +142,149 @@
 <p><a href="https://cdn.socket.io/socket.io-1.4.5.js" target="_blank" rel="noopener">socket.io源码</a><br><a href="http://www.ibm.com/developerworks/cn/web/1112_huangxa_websocket/index.html" target="_blank" rel="noopener">使用 HTML5 WebSocket 构建实时 Web 应用</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket" target="_blank" rel="noopener">MDN - WebSocket</a></p>
 </blockquote>
 
-      
-    </div>
-
-    <div>
-      
-        
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/07/01/window-perfomance检测页面性能/" rel="next" title="window.perfomance检测页面性能">
-                <i class="fa fa-chevron-left"></i> window.perfomance检测页面性能
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/20/post-local-repository-to-remote/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
   </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/07/08/Start-webSocket/"
-           data-title="Start webSocket" data-url="http://baby24007.github.io/2016/07/08/Start-webSocket/">
-      </div>
-    
-  </div>
-
-
-        </div>
-        
-          
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="article-tags">
+    
   </div>
+    
+  
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+</article>
 
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.jpg"
-               alt="Bonita Lee" />
-          <p class="site-author-name" itemprop="name">Bonita Lee</p>
-          <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">11</span>
-              <span class="site-state-item-name">posts</span>
-            </a>
-          </div>
-
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">tags</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/baby24007" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://twitter.com/baby24007" target="_blank" title="Twitter">
-                  
-                    <i class="fa fa-fw fa-twitter"></i>
-                  
-                  Twitter
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/bazajj" target="_blank" title="微博">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  微博
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#现在系统采用的是comet长链接，要修改为websocket实现通信"><span class="nav-number">1.</span> <span class="nav-text">现在系统采用的是comet长链接，要修改为websocket实现通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#戳这里－-gt-comet实现的流程图"><span class="nav-number">2.</span> <span class="nav-text">戳这里－&gt;comet实现的流程图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改成websocket以后的流程图"><span class="nav-number">3.</span> <span class="nav-text">改成websocket以后的流程图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文章"><span class="nav-number">4.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
-            
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
+      <script>document.getElementById("loading-bar").style.width="60%";</script>
     </main>
+    
+<footer id="footer" class="clearfix">
+	
+  <div>&copy; <a href="http://baby24007.github.io">urnotBonitaLee</a> Theme by <a href="http://artifact.me/" target="_blank">Art Chen</a>.</div>
+  <div>Powered by <a href="https://hexo.io/" rel="external">Hexo</a>.</div>
+</footer>
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Bonita Lee</span>
-</div>
 
-<div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
-</div>
-
-<div class="theme-info">
-  Theme -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
-
-        
-
-        
-      </div>
-    </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    <script>document.getElementById("loading-bar").style.width="80%";</script>
+    <div class="overlay"></div>
   </div>
+  <div class="site-sidebar">
 
+	
+	
+	<div class="sidebar-switch clearfix "
+		style="display: none">
+		<a class="dark-btn active" data-toggle="toc">
+	    <span class="icon icon-list"></span>
+	    <span class="text">Index</span>
+	  </a>
+	  <a class="dark-btn" data-toggle="bio">
+	    <span class="icon icon-person"></span>
+	    <span class="text">Bio</span>
+	  </a>
+	</div>
+
+	<div class="site-toc "
+		style="display: none">
+		
+	    <div class="no-index">No Index</div>
+	  
+  </div>
   
+	<div class="site-bio show"
+		style="display: block">
+		
+	  <!-- About Me -->
+	  <div class="about-me clearfix">
+	    <div class="avatar">
+	      <img src="/img/avatar.png" />
+	    </div>
+	    <div class="info">
+	      <a class="name dark-btn" href="/about">
+	        Bonita Lee
+	      </a>
+	    </div>
+	    <div class="info">
+	      <span class="item desc">
+	        
+	      </span>
+	    </div>
+	  </div>
+	
+	  <!-- Social Icons -->
+	  <div class="social clearfix">
+	    
+	      
+	        <a href="/atom.xml" class="feed"
+	          target="_blank" rel="external">
+	          <span class="icon icon-feed"></span>
+	        </a>
+	      
+	        <a href="https://github.com/artchen" class="github"
+	          target="_blank" rel="external">
+	          <span class="icon icon-github"></span>
+	        </a>
+	      
+	    
+	  </div>
+	
+	  <!-- Home & Bottom -->
+	  <div class="shortcuts clearfix">
+	    <div class="bk">
+	      <a href="#header" class="dark-btn window-nav">
+	        <span class="icon icon-chevron-thin-up"></span>
+	        <span class="text">Back to Top</span>
+	      </a>
+	    </div>
+	    <div class="bk">
+	      <a href="#footer" class="dark-btn window-nav">
+	        <span class="icon icon-chevron-thin-down"></span>
+	        <span class="text">Go to Bottom</span>
+	      </a>
+	    </div>
+	  </div>
+
+	</div>
+
+</div>
+
+  <!-- Universal Search -->
 
 <script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
 </script>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/jquery.js"><\/script>')</script>
+
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+<!-- Disqus -->
 
 
 
+<!-- Swiftype -->
 
+<script type="text/javascript">
+  /* Swiftype */
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
 
+  _st('install','FHMeAyBdVccJECstf-XJ','2.0.0');
+</script>
 
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-569722b77263e377" async="async"></script>
 
-
-  
-
-
-
-  
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
-
-
-
-  
-
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"baby24007"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
-    
-      
-      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-      <script src="/js/src/hook-duoshuo.js"></script>
-    
-  
-
-
-
-
-
-
-  
-  
-  
-
-  
-
-  
-
+  <script>document.getElementById("loading-bar").style.width="100%";</script>
 </body>
 </html>
