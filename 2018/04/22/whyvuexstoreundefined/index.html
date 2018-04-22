@@ -86,17 +86,17 @@
 
 
 
-<meta name="description" content="title: 引入vuex以后，子组件里调用$store的时候始终是undefineddate: 2018-04-22 23:32:29 tags: [vuex]最近在学习vue的时候，加入了vuex，在store里创建了index.js,分别引入了module化的store，然后在main.js里引入了store/index.js，引入成功，但是在子组件里调用this.$store的时候一直都">
+<meta name="description" content="title: 引入vuex以后，子组件里调用$store的时候始终是undefineddate: 2018-04-22 23:32:29 tags: 最近在学习vue的时候，加入了vuex，在store里创建了index.js,分别引入了module化的store，然后在main.js里引入了store/index.js，引入成功，但是在子组件里调用this.$store的时候一直都是undef">
 <meta property="og:type" content="article">
 <meta property="og:title" content="urnotBonitaLee">
 <meta property="og:url" content="http://baby24007.github.io/2018/04/22/whyvuexstoreundefined/index.html">
 <meta property="og:site_name" content="urnotBonitaLee">
-<meta property="og:description" content="title: 引入vuex以后，子组件里调用$store的时候始终是undefineddate: 2018-04-22 23:32:29 tags: [vuex]最近在学习vue的时候，加入了vuex，在store里创建了index.js,分别引入了module化的store，然后在main.js里引入了store/index.js，引入成功，但是在子组件里调用this.$store的时候一直都">
+<meta property="og:description" content="title: 引入vuex以后，子组件里调用$store的时候始终是undefineddate: 2018-04-22 23:32:29 tags: 最近在学习vue的时候，加入了vuex，在store里创建了index.js,分别引入了module化的store，然后在main.js里引入了store/index.js，引入成功，但是在子组件里调用this.$store的时候一直都是undef">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-04-22T15:39:04.662Z">
+<meta property="og:updated_time" content="2018-04-22T15:41:09.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="urnotBonitaLee">
-<meta name="twitter:description" content="title: 引入vuex以后，子组件里调用$store的时候始终是undefineddate: 2018-04-22 23:32:29 tags: [vuex]最近在学习vue的时候，加入了vuex，在store里创建了index.js,分别引入了module化的store，然后在main.js里引入了store/index.js，引入成功，但是在子组件里调用this.$store的时候一直都">
+<meta name="twitter:description" content="title: 引入vuex以后，子组件里调用$store的时候始终是undefineddate: 2018-04-22 23:32:29 tags: 最近在学习vue的时候，加入了vuex，在store里创建了index.js,分别引入了module化的store，然后在main.js里引入了store/index.js，引入成功，但是在子组件里调用this.$store的时候一直都是undef">
 
 
 
@@ -256,7 +256,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2018-04-22T23:39:04+08:00" content="2018-04-22">
+            <time itemprop="dateCreated" datetime="2018-04-22T23:41:09+08:00" content="2018-04-22">
               2018-04-22
             </time>
           </span>
@@ -293,7 +293,7 @@
       
         <hr>
 <p>title: 引入vuex以后，子组件里调用$store的时候始终是undefined<br>date: 2018-04-22 23:32:29</p>
-<h2 id="tags-vuex"><a href="#tags-vuex" class="headerlink" title="tags: [vuex]"></a>tags: [vuex]</h2><p>最近在学习vue的时候，加入了vuex，在store里创建了index.js,分别引入了module化的store，然后在main.js里引入了store/index.js，引入成功，但是在子组件里调用this.$store的时候一直都是undefined，代码分别如下：</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags: "></a>tags: </h2><p>最近在学习vue的时候，加入了vuex，在store里创建了index.js,分别引入了module化的store，然后在main.js里引入了store/index.js，引入成功，但是在子组件里调用this.$store的时候一直都是undefined，代码分别如下：</p>
 <ul>
 <li><p>store/index/js</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'Vue'</span></span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'Vuex'</span></span><br><span class="line"><span class="keyword">import</span> rm <span class="keyword">from</span> <span class="string">'./modules/rm'</span></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  modules: &#123;</span><br><span class="line">    rm</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -478,7 +478,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tags-vuex"><span class="nav-number">1.</span> <span class="nav-text">tags: [vuex]</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tags"><span class="nav-number">1.</span> <span class="nav-text">tags: </span></a></li></ol></div>
             
           </div>
         </section>
