@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="websocket,cookie," />
 
 
 
@@ -86,17 +86,18 @@
 
 
 
-<meta name="description" content="title: websocket如何能不携带cookiedate: 2018-03-22 18:08:33tags:  websocket cookie   背景：   IM工程接口都迁移到另一个工程下，域名是channel.xiaoshouyi.com;同时部署了一个相同域名不同协议的websocket。此时ws请求中会携带所有.xiaoshouyi.com下的cookie，导致同时打开crm">
+<meta name="description" content="背景：   IM工程接口都迁移到另一个工程下，域名是channel.xiaoshouyi.com;同时部署了一个相同域名不同协议的websocket。此时ws请求中会携带所有.xiaoshouyi.com下的cookie，导致同时打开crm.xiaoshouyi.com的其他页面会因此被logout。   在网上搜了一下貌似没有什么文章有介绍websocket如何能不携带cookie的，于是只能自">
+<meta name="keywords" content="websocket,cookie">
 <meta property="og:type" content="article">
-<meta property="og:title" content="urnotBonitaLee">
+<meta property="og:title" content="websocket如何能不携带cookie">
 <meta property="og:url" content="http://baby24007.github.io/2018/03/22/websocket如何能不携带cookie/index.html">
 <meta property="og:site_name" content="urnotBonitaLee">
-<meta property="og:description" content="title: websocket如何能不携带cookiedate: 2018-03-22 18:08:33tags:  websocket cookie   背景：   IM工程接口都迁移到另一个工程下，域名是channel.xiaoshouyi.com;同时部署了一个相同域名不同协议的websocket。此时ws请求中会携带所有.xiaoshouyi.com下的cookie，导致同时打开crm">
+<meta property="og:description" content="背景：   IM工程接口都迁移到另一个工程下，域名是channel.xiaoshouyi.com;同时部署了一个相同域名不同协议的websocket。此时ws请求中会携带所有.xiaoshouyi.com下的cookie，导致同时打开crm.xiaoshouyi.com的其他页面会因此被logout。   在网上搜了一下貌似没有什么文章有介绍websocket如何能不携带cookie的，于是只能自">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-22T10:13:48.394Z">
+<meta property="og:updated_time" content="2018-04-22T15:44:38.995Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="urnotBonitaLee">
-<meta name="twitter:description" content="title: websocket如何能不携带cookiedate: 2018-03-22 18:08:33tags:  websocket cookie   背景：   IM工程接口都迁移到另一个工程下，域名是channel.xiaoshouyi.com;同时部署了一个相同域名不同协议的websocket。此时ws请求中会携带所有.xiaoshouyi.com下的cookie，导致同时打开crm">
+<meta name="twitter:title" content="websocket如何能不携带cookie">
+<meta name="twitter:description" content="背景：   IM工程接口都迁移到另一个工程下，域名是channel.xiaoshouyi.com;同时部署了一个相同域名不同协议的websocket。此时ws请求中会携带所有.xiaoshouyi.com下的cookie，导致同时打开crm.xiaoshouyi.com的其他页面会因此被logout。   在网上搜了一下貌似没有什么文章有介绍websocket如何能不携带cookie的，于是只能自">
 
 
 
@@ -114,7 +115,7 @@
   };
 </script>
 
-  <title>  | urnotBonitaLee </title>
+  <title> websocket如何能不携带cookie | urnotBonitaLee </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -244,7 +245,7 @@
             
             
               
-                
+                websocket如何能不携带cookie
               
             
           </h1>
@@ -256,7 +257,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2018-03-22T18:13:48+08:00" content="2018-03-22">
+            <time itemprop="dateCreated" datetime="2018-03-22T18:08:33+08:00" content="2018-03-22">
               2018-03-22
             </time>
           </span>
@@ -291,14 +292,7 @@
       
 
       
-        <hr>
-<p>title: websocket如何能不携带cookie<br>date: 2018-03-22 18:08:33<br>tags:</p>
-<ul>
-<li>websocket</li>
-<li>cookie</li>
-</ul>
-<hr>
-<h2 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h2><p>   IM工程接口都迁移到另一个工程下，域名是channel.xiaoshouyi.com;同时部署了一个相同域名不同协议的websocket。此时ws请求中会携带所有.xiaoshouyi.com下的cookie，导致同时打开crm.xiaoshouyi.com的其他页面会因此被logout。<br>   在网上搜了一下貌似没有什么文章有介绍websocket如何能不携带cookie的，于是只能自己动手尝试。</p>
+        <h2 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h2><p>   IM工程接口都迁移到另一个工程下，域名是channel.xiaoshouyi.com;同时部署了一个相同域名不同协议的websocket。此时ws请求中会携带所有.xiaoshouyi.com下的cookie，导致同时打开crm.xiaoshouyi.com的其他页面会因此被logout。<br>   在网上搜了一下貌似没有什么文章有介绍websocket如何能不携带cookie的，于是只能自己动手尝试。</p>
 <h3 id="1-尝试第一种，设置Access-Control-Allow-Credentials"><a href="#1-尝试第一种，设置Access-Control-Allow-Credentials" class="headerlink" title="1.尝试第一种，设置Access-Control-Allow-Credentials"></a>1.尝试第一种，设置Access-Control-Allow-Credentials</h3><blockquote>
 <p>CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服务器，一方面要服务器同意，指定Access-Control-Allow-Credentials字段。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Credentials: true</span><br></pre></td></tr></table></figure></p>
 </blockquote>
@@ -324,18 +318,30 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/websocket/" rel="tag">#websocket</a>
+          
+            <a href="/tags/cookie/" rel="tag">#cookie</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/20/post-local-repository-to-remote/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2018/03/20/post-local-repository-to-remote/" rel="next" title="post local repository to remote">
+                <i class="fa fa-chevron-left"></i> post local repository to remote
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/14/getterandsetter/" rel="prev" title="getter 和 setter 方法有什么意义？">
+                getter 和 setter 方法有什么意义？ <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -362,7 +368,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2018/03/22/websocket如何能不携带cookie/"
-           data-title="" data-url="http://baby24007.github.io/2018/03/22/websocket如何能不携带cookie/">
+           data-title="websocket如何能不携带cookie" data-url="http://baby24007.github.io/2018/03/22/websocket如何能不携带cookie/">
       </div>
     
   </div>
@@ -407,7 +413,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -417,7 +423,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
