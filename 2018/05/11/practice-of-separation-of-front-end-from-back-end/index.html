@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="issues," />
+  <meta name="keywords" content="nodejs mock nginx," />
 
 
 
@@ -86,18 +86,20 @@
 
 
 
-<meta name="description" content="Deploy or 启动server时出错错误信息1234567891011bogon:tryHexo admin$ hexo server INFO  Start processing ERROR Theme config load failed. ERROR Process failed: _config.yml YAMLException: can not read a block mapp">
-<meta name="keywords" content="issues">
+<meta name="description" content="初想：基于nodejs搭建一个mock环境 最近在做开发的时候开发环境的接口频频出现问题，自己本地启动的java环境里，接口一报错我就一脸懵逼，然后就得去找相关的人解决异常，而小部件又属于那种只要有一个环节没有打通的就无法往后进行的这么个类型，一天到晚都在解决各种环境问题，一天时间里自己的代码没写多少，一半天儿的处理zookeeper问题，两半天儿的处理服务起不来的情况，感觉整个人都不好了。至此，">
+<meta name="keywords" content="nodejs mock nginx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Resolved issues">
-<meta property="og:url" content="http://baby24007.github.io/2016/05/31/Resolved-issues/index.html">
+<meta property="og:title" content="由于不停被不稳定的后端接口阻塞所引发的对前后端分离的思考">
+<meta property="og:url" content="http://baby24007.github.io/2018/05/11/practice-of-separation-of-front-end-from-back-end/index.html">
 <meta property="og:site_name" content="urnotBonitaLee">
-<meta property="og:description" content="Deploy or 启动server时出错错误信息1234567891011bogon:tryHexo admin$ hexo server INFO  Start processing ERROR Theme config load failed. ERROR Process failed: _config.yml YAMLException: can not read a block mapp">
+<meta property="og:description" content="初想：基于nodejs搭建一个mock环境 最近在做开发的时候开发环境的接口频频出现问题，自己本地启动的java环境里，接口一报错我就一脸懵逼，然后就得去找相关的人解决异常，而小部件又属于那种只要有一个环节没有打通的就无法往后进行的这么个类型，一天到晚都在解决各种环境问题，一天时间里自己的代码没写多少，一半天儿的处理zookeeper问题，两半天儿的处理服务起不来的情况，感觉整个人都不好了。至此，">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2016-05-31T07:01:21.000Z">
+<meta property="og:image" content="http://chuantu.biz/t6/309/1526047711x-1404781186.png">
+<meta property="og:updated_time" content="2018-05-11T14:26:28.811Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Resolved issues">
-<meta name="twitter:description" content="Deploy or 启动server时出错错误信息1234567891011bogon:tryHexo admin$ hexo server INFO  Start processing ERROR Theme config load failed. ERROR Process failed: _config.yml YAMLException: can not read a block mapp">
+<meta name="twitter:title" content="由于不停被不稳定的后端接口阻塞所引发的对前后端分离的思考">
+<meta name="twitter:description" content="初想：基于nodejs搭建一个mock环境 最近在做开发的时候开发环境的接口频频出现问题，自己本地启动的java环境里，接口一报错我就一脸懵逼，然后就得去找相关的人解决异常，而小部件又属于那种只要有一个环节没有打通的就无法往后进行的这么个类型，一天到晚都在解决各种环境问题，一天时间里自己的代码没写多少，一半天儿的处理zookeeper问题，两半天儿的处理服务起不来的情况，感觉整个人都不好了。至此，">
+<meta name="twitter:image" content="http://chuantu.biz/t6/309/1526047711x-1404781186.png">
 
 
 
@@ -115,7 +117,7 @@
   };
 </script>
 
-  <title> Resolved issues | urnotBonitaLee </title>
+  <title> 由于不停被不稳定的后端接口阻塞所引发的对前后端分离的思考 | urnotBonitaLee </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -245,7 +247,7 @@
             
             
               
-                Resolved issues
+                由于不停被不稳定的后端接口阻塞所引发的对前后端分离的思考
               
             
           </h1>
@@ -257,8 +259,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-05-31T14:49:08+08:00" content="2016-05-31">
-              2016-05-31
+            <time itemprop="dateCreated" datetime="2018-05-11T20:58:47+08:00" content="2018-05-11">
+              2018-05-11
             </time>
           </span>
 
@@ -268,8 +270,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/31/Resolved-issues/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/Resolved-issues/" itemprop="commentsCount"></span>
+                <a href="/2018/05/11/practice-of-separation-of-front-end-from-back-end/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/05/11/practice-of-separation-of-front-end-from-back-end/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -292,10 +294,21 @@
       
 
       
-        <h2 id="Deploy-or-启动server时出错"><a href="#Deploy-or-启动server时出错" class="headerlink" title="Deploy or 启动server时出错"></a>Deploy or 启动server时出错</h2><h3 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h3><figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">bogon:tryHexo admin$ hexo server</span><br><span class="line"> INFO  Start processing</span><br><span class="line"> ERROR Theme config load failed.</span><br><span class="line"> ERROR Process failed: _config.yml</span><br><span class="line"> YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 245, column 1:</span><br><span class="line">     # Disqus</span><br><span class="line">     ^</span><br><span class="line">     at generateError (/Users/admin/PhpstormProjects/test/BonitaOnTheWay/tryHexo/node_modules/hexo/node_modules/js-yaml/lib/js-yaml/loader.js:162:10)</span><br><span class="line">     at throwError (/Users/admin/PhpstormProjects/test/BonitaOnTheWay/tryHexo/node_modules/hexo/node_modules/js-yaml/lib/js-yaml/loader.js:168:9)</span><br><span class="line">     at readBlockMapping (/Users/admin/PhpstormProjects/test/BonitaOnTheWay/tryHexo/node_modules/hexo/node_modules/js-yaml/lib/js-yaml/loader.js:1040:9)</span><br><span class="line">     at composeNode (/Users/admin/PhpstormProjects/test/BonitaOnTheWay</span><br></pre></td></tr></table></figure>
-<h3 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h3><blockquote>
-<p>_config.yml的每个属性配置时，:后边一定要有一个空格<br>找到报错的行，改掉<br>之前language设置不了就是因为报错了，完全没有编译成功，我竟然没发现，真是够了</p>
+        <h2 id="初想：基于nodejs搭建一个mock环境"><a href="#初想：基于nodejs搭建一个mock环境" class="headerlink" title="初想：基于nodejs搭建一个mock环境"></a>初想：基于nodejs搭建一个mock环境</h2><blockquote>
+<p>最近在做开发的时候开发环境的接口频频出现问题，自己本地启动的java环境里，接口一报错我就一脸懵逼，然后就得去找相关的人解决异常，而小部件又属于那种只要有一个环节没有打通的就无法往后进行的这么个类型，一天到晚都在解决各种环境问题，一天时间里自己的代码没写多少，一半天儿的处理zookeeper问题，两半天儿的处理服务起不来的情况，感觉整个人都不好了。至此，我突然明白了什么才叫真正意义上的前后端分离。</p>
 </blockquote>
+<p>曾经一直以为前端所用到的数据全都通过ajax等异步形式获取，前端的人只管展现，后端的人只管数据，就叫做前后端分离。但是这只是前后端分离的其中一部分。这样相对于那种前端切图写静态页面，然后交给后端变成jsp/php/vm模版的模式已经强太多了。但是仍然会存在一些问题：</p>
+<ul>
+<li>后端接口数据不稳定，开发效率难以保证</li>
+<li>自己搭建后端环境很痛苦，试过都会懂的</li>
+</ul>
+<p>那么怎么才能最快速的解决这个问题呢？我有一个初步的设想，目前自己本地环境的静态资源是通过nginx反向代理到本地路径的，那么我只需要把所有的action请求做一层代理，代理到一个无需走服务器，但是也能返回相应格式的数据即可。那么画一个图，流程大概是这样的：<br><img src="http://chuantu.biz/t6/309/1526047711x-1404781186.png" alt="A flow"></p>
+<h3 id="如何搭建"><a href="#如何搭建" class="headerlink" title="如何搭建"></a>如何搭建</h3><ul>
+<li><strong>准备mock数据</strong><br>根据<a href="http://rap.ingageapp.com" target="_blank" rel="noopener">Rap</a>(RAP是一个可视化接口管理工具)上的接口生成mock数据，这样做就要求接口严格按照Rap上的返回参数格式来实现接口，否则前端写半天搞什么分离都是白搭。</li>
+<li><strong>搭建nodejs服务</strong><br><code>我先去看书了...</code></li>
+<li><strong>根据action读取mock数据并返回</strong><br><code>TODO...</code></li>
+<li><strong>配置Nginx</strong><br>找到nginx配置路径 <code>/usr/local/etc/nginx/</code><br>找到配置接口location的地方 <code>/usr/local/etc/nginx/servers/ingage.conf</code><br>增加一个location把/widget/路径下的action代理到nodejs服务上</li>
+</ul>
 
       
     </div>
@@ -317,7 +330,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/issues/" rel="tag">#issues</a>
+            <a href="/tags/nodejs-mock-nginx/" rel="tag">#nodejs mock nginx</a>
           
         </div>
       
@@ -326,17 +339,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/31/create-some-tags-or-categories/" rel="next" title="create some tags or categories">
-                <i class="fa fa-chevron-left"></i> create some tags or categories
+              <a href="/2018/04/22/whyvuexstoreundefined/" rel="next" title="引入vuex以后，子组件里调用$store的时候始终是undefined">
+                <i class="fa fa-chevron-left"></i> 引入vuex以后，子组件里调用$store的时候始终是undefined
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/09/Working-Temporary/" rel="prev" title="Working Temporary">
-                Working Temporary <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -362,8 +371,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/31/Resolved-issues/"
-           data-title="Resolved issues" data-url="http://baby24007.github.io/2016/05/31/Resolved-issues/">
+      <div class="ds-thread" data-thread-key="2018/05/11/practice-of-separation-of-front-end-from-back-end/"
+           data-title="由于不停被不稳定的后端接口阻塞所引发的对前后端分离的思考" data-url="http://baby24007.github.io/2018/05/11/practice-of-separation-of-front-end-from-back-end/">
       </div>
     
   </div>
@@ -476,7 +485,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Deploy-or-启动server时出错"><span class="nav-number">1.</span> <span class="nav-text">Deploy or 启动server时出错</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#错误信息"><span class="nav-number">1.1.</span> <span class="nav-text">错误信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决问题"><span class="nav-number">1.2.</span> <span class="nav-text">解决问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初想：基于nodejs搭建一个mock环境"><span class="nav-number">1.</span> <span class="nav-text">初想：基于nodejs搭建一个mock环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何搭建"><span class="nav-number">1.1.</span> <span class="nav-text">如何搭建</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
