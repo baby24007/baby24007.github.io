@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Front-matter,YAML," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -86,18 +86,17 @@
 
 
 
-<meta name="description" content="如何正确的添加tags和categories在.md文件上面的那一部分内容是Front-matter,用于指定个别文件的变量.需要注意  必须在最前面:must be the first thing in the file 必须要三条杠!三条杠=.=  醉了:must take the form of valid YAML set between triple-dashed lines UTF-8">
-<meta name="keywords" content="Front-matter,YAML">
+<meta name="description" content="今天被问到这么一个题。看上去挺简单的，利用object的key不能重复然后就把重复次数存下来了。。。然后怎么找到最大的那个呢。。。。然后怎么才能不遍历很多次呢。。。然后如果既有Number又有string怎么办呢。。。然后。。就跪了。。。 那就写一下把。。。  只遍历一次 String(1) &amp;amp;&amp;amp; Number(1)需要辨别成两个不同元素   只遍历了一次，时间复杂度是o(n)?">
 <meta property="og:type" content="article">
-<meta property="og:title" content="create some tags or categories">
-<meta property="og:url" content="http://baby24007.github.io/2016/05/31/create-some-tags-or-categories/index.html">
+<meta property="og:title" content="找出数组中出现次数最多的元素（考虑性能优化）">
+<meta property="og:url" content="http://baby24007.github.io/2018/06/13/find-max-element/index.html">
 <meta property="og:site_name" content="urnotBonitaLee">
-<meta property="og:description" content="如何正确的添加tags和categories在.md文件上面的那一部分内容是Front-matter,用于指定个别文件的变量.需要注意  必须在最前面:must be the first thing in the file 必须要三条杠!三条杠=.=  醉了:must take the form of valid YAML set between triple-dashed lines UTF-8">
+<meta property="og:description" content="今天被问到这么一个题。看上去挺简单的，利用object的key不能重复然后就把重复次数存下来了。。。然后怎么找到最大的那个呢。。。。然后怎么才能不遍历很多次呢。。。然后如果既有Number又有string怎么办呢。。。然后。。就跪了。。。 那就写一下把。。。  只遍历一次 String(1) &amp;amp;&amp;amp; Number(1)需要辨别成两个不同元素   只遍历了一次，时间复杂度是o(n)?">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2016-05-31T03:17:36.000Z">
+<meta property="og:updated_time" content="2018-06-13T15:35:29.208Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="create some tags or categories">
-<meta name="twitter:description" content="如何正确的添加tags和categories在.md文件上面的那一部分内容是Front-matter,用于指定个别文件的变量.需要注意  必须在最前面:must be the first thing in the file 必须要三条杠!三条杠=.=  醉了:must take the form of valid YAML set between triple-dashed lines UTF-8">
+<meta name="twitter:title" content="找出数组中出现次数最多的元素（考虑性能优化）">
+<meta name="twitter:description" content="今天被问到这么一个题。看上去挺简单的，利用object的key不能重复然后就把重复次数存下来了。。。然后怎么找到最大的那个呢。。。。然后怎么才能不遍历很多次呢。。。然后如果既有Number又有string怎么办呢。。。然后。。就跪了。。。 那就写一下把。。。  只遍历一次 String(1) &amp;amp;&amp;amp; Number(1)需要辨别成两个不同元素   只遍历了一次，时间复杂度是o(n)?">
 
 
 
@@ -115,7 +114,7 @@
   };
 </script>
 
-  <title> create some tags or categories | urnotBonitaLee </title>
+  <title> 找出数组中出现次数最多的元素（考虑性能优化） | urnotBonitaLee </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -245,7 +244,7 @@
             
             
               
-                create some tags or categories
+                找出数组中出现次数最多的元素（考虑性能优化）
               
             
           </h1>
@@ -257,8 +256,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-05-31T11:04:58+08:00" content="2016-05-31">
-              2016-05-31
+            <time itemprop="dateCreated" datetime="2018-06-13T23:27:42+08:00" content="2018-06-13">
+              2018-06-13
             </time>
           </span>
 
@@ -268,8 +267,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/31/create-some-tags-or-categories/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/create-some-tags-or-categories/" itemprop="commentsCount"></span>
+                <a href="/2018/06/13/find-max-element/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/06/13/find-max-element/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -292,18 +291,15 @@
       
 
       
-        <h2 id="如何正确的添加tags和categories"><a href="#如何正确的添加tags和categories" class="headerlink" title="如何正确的添加tags和categories"></a>如何正确的添加tags和categories</h2><p>在.md文件上面的那一部分内容是Front-matter,用于指定个别文件的变量.<br><strong>需要注意</strong></p>
-<ol>
-<li>必须在最前面:must be the first thing in the file</li>
-<li>必须要三条杠!三条杠=.=  醉了:must take the form of valid YAML set between triple-dashed lines</li>
-<li>UTF-8编码的时候不能有BOM:make sure that no BOM header characters exist in your files<br>书归正传:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">- Diary</span><br><span class="line">tags:</span><br><span class="line">- PS3</span><br><span class="line">- Games</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>在Hexo中其实还可以用json格式:</p>
+        <p>今天被问到这么一个题。看上去挺简单的，利用object的key不能重复然后就把重复次数存下来了。。。<br>然后怎么找到最大的那个呢。。。。<br>然后怎么才能不遍历很多次呢。。。<br>然后如果既有Number又有string怎么办呢。。。<br>然后。。就跪了。。。</p>
+<p>那就写一下把。。。</p>
+<ul>
+<li>只遍历一次</li>
+<li>String(1) &amp;&amp; Number(1)需要辨别成两个不同元素</li>
+</ul>
 <blockquote>
-<p>JSON Front-matter,除了 YAML 外，你也可以使用 JSON 来编写 Front-matter，只要将 — 代换成 ;;; 即可。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"title"</span>: <span class="string">"Hello World"</span>,</span><br><span class="line"><span class="string">"date"</span>: <span class="string">"2013/7/13 20:46:25"</span></span><br><span class="line">;;;</span><br></pre></td></tr></table></figure></p>
+<p>只遍历了一次，时间复杂度是o(n)?  只创建了一个map来存储，空间复杂度是o(1)?<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">findMaxItem</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> max = <span class="literal">null</span>;</span><br><span class="line">  <span class="keyword">var</span> len = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">var</span> maxItem = <span class="literal">null</span>;</span><br><span class="line">  <span class="keyword">var</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">  <span class="keyword">if</span>(!<span class="built_in">Array</span>.isArray(arr))&#123;</span><br><span class="line">    arr = <span class="built_in">Array</span>.prototype.slice.call(arr);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  arr.forEach(<span class="function">(<span class="params">item</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(map.has(item))&#123;</span><br><span class="line">      len = map.get(item);</span><br><span class="line">      len ++;</span><br><span class="line">      map.set(item, len);</span><br><span class="line">      <span class="keyword">if</span>(len &gt; max)&#123;</span><br><span class="line">        max = len;</span><br><span class="line">        maxItem = item;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(map === <span class="literal">null</span>)&#123;</span><br><span class="line">        max = <span class="number">1</span>;</span><br><span class="line">        maxItem = item;</span><br><span class="line">      &#125;</span><br><span class="line">      map.set(item, <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`个数最多的值：<span class="subst">$&#123;maxItem&#125;</span>,有<span class="subst">$&#123;max&#125;</span>个`</span>);</span><br><span class="line">&#125;</span><br><span class="line">findMaxItem([<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="string">'a'</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="string">'a'</span>,<span class="string">'a'</span>,<span class="number">1</span>,<span class="string">'1'</span>])</span><br><span class="line">findMaxItem(<span class="string">'aabbcccccccs'</span>);</span><br><span class="line">findMaxItem([<span class="string">'hello'</span>,<span class="string">'foo'</span>,<span class="string">'foo'</span>,<span class="string">'foo'</span>,<span class="string">'bar'</span>,<span class="string">'bar'</span>,<span class="string">'12'</span>,<span class="string">'12'</span>,<span class="string">'12'</span>,<span class="string">'12'</span>,<span class="number">12</span>]);</span><br><span class="line">findMaxItem([<span class="number">12</span>,<span class="number">14</span>,<span class="number">14</span>,<span class="number">14</span>,<span class="string">'14'</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">33</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">55</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">14</span>,<span class="number">4</span>,<span class="number">14</span>,<span class="number">3</span>,<span class="number">14</span>]);</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://jekyllrb.com/docs/frontmatter/" target="_blank" rel="noopener">Front-matter的文档</a><br><a href="https://en.wikipedia.org/wiki/YAML#Lists" target="_blank" rel="noopener">YAML-Lists</a><br><a href="https://hexo.io/zh-cn/docs/front-matter.html#分类和标签" target="_blank" rel="noopener">在Hexo中使用front-matter</a><br><a href="http://theme-next.iissnan.com/theme-settings.html#duoshuo-ua" target="_blank" rel="noopener">Hexo文档还没有一个主题配置文档写得详细,真是够了=.=</a></p>
 
       
     </div>
@@ -323,30 +319,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Front-matter/" rel="tag">#Front-matter</a>
-          
-            <a href="/tags/YAML/" rel="tag">#YAML</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/31/create-a-404-page/" rel="next" title="create a 404 page">
-                <i class="fa fa-chevron-left"></i> create a 404 page
+              <a href="/2018/06/08/my-mvvm-emailsinput/" rel="next" title="my-mvvm-emailsinput">
+                <i class="fa fa-chevron-left"></i> my-mvvm-emailsinput
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/31/Resolved-issues/" rel="prev" title="Resolved issues">
-                Resolved issues <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -372,8 +356,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/31/create-some-tags-or-categories/"
-           data-title="create some tags or categories" data-url="http://baby24007.github.io/2016/05/31/create-some-tags-or-categories/">
+      <div class="ds-thread" data-thread-key="2018/06/13/find-max-element/"
+           data-title="找出数组中出现次数最多的元素（考虑性能优化）" data-url="http://baby24007.github.io/2018/06/13/find-max-element/">
       </div>
     
   </div>
@@ -486,7 +470,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何正确的添加tags和categories"><span class="nav-number">1.</span> <span class="nav-text">如何正确的添加tags和categories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">2.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+              <p class="post-toc-empty">This post does not have a Table of Contents</p>
             
           </div>
         </section>
